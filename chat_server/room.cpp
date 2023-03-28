@@ -17,7 +17,7 @@ void room::remove(const std::string& clientname) {
     m_clients.erase(clientname);
 }
 
-std::vector<std::string> room::clients() {
+std::vector<std::string> room::clients() const {
     std::lock_guard l(m_mut);
 
     std::vector<std::string> result;
